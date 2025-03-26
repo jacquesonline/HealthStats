@@ -15,7 +15,7 @@ def main():
         print("Changes successfully pushed to the remote repository.")
     except subprocess.CalledProcessError as e:
         # Print the error details
-        if e.returncode == 128:
+        if e.returncode == 128 or "nothing to commit" in e.stderr:
             print("No changes to commit.")
             pass
         print(f"An error occurred: {e}")
