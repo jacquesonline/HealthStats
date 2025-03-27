@@ -17,14 +17,13 @@ def main():
         # Print the error details
         if e.returncode in (128, 1): 
             print("No changes to commit.")
-            exit
-        print(f"An error occurred: {e}")
-        print(f"Command: {e.cmd}")
-        print(f"Return Code: {e.returncode}")
-        if e.stdout:
-            print(f"Output: {e.stdout.strip()}")
-        if e.stderr:
-            print(f"Error Output: {e.stderr.strip()}")
+        # print(f"An error occurred: {e}")
+        # print(f"Command: {e.cmd}")
+        # print(f"Return Code: {e.returncode}")
+        # if e.stdout:
+        #     print(f"Output: {e.stdout.strip()}")
+        # if e.stderr:
+        #     print(f"Error Output: {e.stderr.strip()}")
 
 if __name__ == "__main__":
     main()
